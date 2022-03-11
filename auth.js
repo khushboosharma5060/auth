@@ -4,7 +4,6 @@ const { MongoClient } = require('mongodb');
 const { BasicStrategy } = require('passport-http');
 const passport = require('passport');
 
-
 const url = 'mongodb://localhost:27017';
 const client = new MongoClient(url);
 
@@ -31,6 +30,7 @@ passport.use(new BasicStrategy(
         }
     }
 ));
+
 
 const express = require('express');
 const Api = express();
